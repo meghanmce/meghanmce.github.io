@@ -4,8 +4,8 @@ body {
     }
 
 a {
-    color: #575757;
-    text-decoration: underline;
+    color: #575757 !important;
+    text-decoration: underline !important;
 }
 @font-face {
     font-family: 'greycliff';
