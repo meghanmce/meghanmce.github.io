@@ -57,7 +57,7 @@ li {
   background-color: #000000;
 }
 
-.work-item:hover .overlay {
+.work-item:hover .overlay{
   opacity: 1;
   cursor: pointer;
 }
