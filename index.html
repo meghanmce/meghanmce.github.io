@@ -6,60 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Meghan McEneaney</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <!-- Bulma Version 0.7.1-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
     <link rel="shortcut icon" type="image/png" href="images/fav-icon.png"/>
+    <script type="text/javascript" src="scripts/pdf.js"></script>
+
 </head>
 
 <body>
-    <section class="hero is-fullheight is-default is-bold">
-        <div class="hero-head">
-            <nav class="navbar nav-center">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <a class="navbar-item is-hidden-desktop" href="/">
-                            <img src="images/title.png">
-                        </a>
-                        <span class="navbar-burger burger" data-target="navMenu">
-            			<span></span>
-                        <span></span>
-                        <span></span>
-                        </span>
-                    </div>
-                    <div id="navMenu" class="navbar-menu">
-                        <div class="navbar-brand is-hidden-mobile">
-                            <a class="navbar-item" href="/">
-                                <img src="images/title.png">
-                            </a>
-                        </div>
-                        <div class="navbar-end">
-                            <div class="tabs is-right">
-                                <ul>
-                                    <li><a href="/">ABOUT</a></li>
-                                    <li><a href="work.html">WORK</a></li>
-                                    <li><a href="/web/viewer.html?file=Meghan-McEneaney.pdf" target="_blank">RESUME</a></li>
-                                </ul>
-                            </div>
-                        </div>
+    <nav class="navbar is-spaced">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item is-hidden-desktop" href="/">
+                    <img src="images/logo.png">
+                </a>
+                <span class="navbar-burger burger" data-target="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+                </span>
+            </div>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-brand is-hidden-mobile">
+                    <a class="navbar-item" href="/">
+                        <img src="images/logo.png">
+                    </a>
+                </div>
+                <div class="navbar-end">
+                    <div class="tabs is-right">
+                        <ul class="borderless">
+                        <li><a href="/">ABOUT</a></li>
+                        <li><a href="/work.html">WORK</a></li>
+                        <li><a href="/web/viewer.html?file=Meghan-McEneaney.pdf" target="_blank">RESUME</a></li>
+                        </ul>
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
+    </nav>
+    <section class="hero is-fullheight is-default is-bold">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="columns is-vcentered">
-                    <div class="column is-5">
-                        <figure class="image is-8by10">
-                            <img src="images/meghan.jpg" alt="Meghan McEneaney">
-                        </figure>
-                    </div>
+                    <figure class="image is-10x10">
+                        <img src="images/13.jpg" alt="Meghan McEneaney">
+                    </figure>
                     <div class="column is-6 is-offset-1">
                         <h1 class="meg-title">MEGHAN MCENEANEY</h1>
                         <h2 class="section">
-                            I'm a Front-end Engineer based in Princeton. I divide my spare time between making music and hanging with my cat.
+                            I'm a Front-end Engineer who loves music and her cat.
                         </h2>
                         <p class="has-text is-left-aligned">
                         	💌 <a target="_blank" href="mailto:meghan.mceneaney@gmail.com">
@@ -69,7 +65,10 @@
                             </a><br/>
                             👾 <a target="_blank" href="https://github.com/meghanmce">
                             GitHub 
-                            </a><br/>                       
+                            </a><br/>  
+                            🎥 <a target="_blank" href="https://vimeo.com/user32608180">
+                            Vimeo 
+                            </a><br />                     
                             📷 <a target="_blank" href="https://www.instagram.com/meghan.jpg/">
                             Instagram
                             </a>
@@ -79,7 +78,6 @@
             </div>
         </div>
     </section>
-    <script src="../js/bulma.js"></script>
 </body>
 <footer class="footer">
   <div class="content has-text-centered">
@@ -88,19 +86,7 @@
     </p>
   </div>
 </footer>
-
 </html>
 
-<script type="text/javascript">
-    (function() {
-  		var burger = document.querySelector('.burger');
-  		var nav = document.querySelector('#'+burger.dataset.target);
- 
-  		burger.addEventListener('click', function(){
-    		burger.classList.toggle('is-active');
-    		nav.classList.toggle('is-active');
-  		});
-	})();
-</script>
+<script type="text/javascript" src="js/navbar.js"></script>
 
-<script type="text/javascript" src="scripts/pdf.js">

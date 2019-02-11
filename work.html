@@ -6,82 +6,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Meghan McEneaney</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <!-- Bulma Version 0.7.1-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
-    <link rel="shortcut icon" type="../image/png" href="images/fav-icon.png"/>
-</head>
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+    <link rel="shortcut icon" type="image/png" href="images/fav-icon.png"/>
+    <script type="text/javascript" src="scripts/pdf.js"></script>
+    
 
+</head>
 <body>
-    <section class="hero is-fullheight is-default is-bold">
-        <div class="hero-head">
-            <nav class="navbar nav-center">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <a class="navbar-item is-hidden-desktop" href="/">
-                            <img src="images/title.png">
-                        </a>
-                        <span class="navbar-burger burger" data-target="navMenu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        </span>
-                    </div>
-                    <div id="navMenu" class="navbar-menu">
-                        <div class="navbar-brand is-hidden-mobile">
-                            <a class="navbar-item" href="/">
-                                <img src="images/title.png">
-                            </a>
-                        </div>
-                        <div class="navbar-end">
-                            <div class="tabs is-right">
-                                <ul>
-                                    <li><a href="/">ABOUT</a></li>
-                                    <li><a href="work.html">WORK</a></li>
-                                    <li><a href="/web/viewer.html?file=Meghan-McEneaney.pdf" target="_blank">RESUME</a></li>
-                                </ul>
-                            </div>
-                        </div>
+    <nav class="navbar is-spaced">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item is-hidden-desktop" href="/">
+                    <img src="images/logo.png">
+                </a>
+                <span class="navbar-burger burger" data-target="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+                </span>
+            </div>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-brand is-hidden-mobile">
+                    <a class="navbar-item" href="/">
+                        <img src="images/logo.png">
+                    </a>
+                </div>
+                <div class="navbar-end">
+                    <div class="tabs is-right">
+                        <ul class="borderless">
+                        <li><a href="/">ABOUT</a></li>
+                        <li><a href="/work.html">WORK</a></li>
+                        <li><a href="/web/viewer.html?file=Meghan-McEneaney.pdf" target="_blank">RESUME</a></li>
+                        </ul>
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
+    </nav>
+    <section class="hero is-fullheight is-default is-bold">
         <div class="hero-body">
             <div class="container">
                 <div class="columns">
-                    <div class="column work-item">
-                        <a href="http://www.ripen.com" target="_blank">
-                            <img src="images/ripen.png" alt="Avatar" class="image">
-                            <div class="overlay">
-                                <div class="text">
-                                    Led the front engineering of the rebuild of RIPEN's agency website using Jekyll, Sass, HTML5 video, ES6 Javascript, and CSS Animations.<br/>
-                                </div>
-                            </div>
-                        </a>
+                    <div class="column work-item" onclick="ripenModal()">
+                      <img src="images/ripen.png" alt="Avatar" class="image">
                     </div>
-                    <div class="column work-item">
-                        <a href="http://www.happychef.com" target="_blank">                            
-                          <img src="images/happychef.png" alt="Avatar" class="image">
-                          <div class="overlay">
-                            <div class="text">Developed UX solutions for dynamic PHP/ MySQL- based e-commerce site for HappyChef.</div>
-                          </div>
-                        </a>
+                    <div id="ripenModal" class="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-content">
+                            <p>Led the front engineering of the rebuild of RIPEN's agency website using Jekyll, Sass, HTML5 video, ES6 Javascript, and CSS Animations.</p>
+                            <a href="https://ripen.com/" target= "_blank" class="button is-white is-large">RIPEN</a>
+                        </div>
+                        <button onclick="closeripenModal()" class="modal-close is-large" aria-label="close"></button>
                     </div>
-                    <div class="column work-item">
-                        <a href="http://njinsurancefraud.org/" target="_blank">
-                          <img src="images/oifp-logo.png" alt="Avatar" class="image">
-                          <div class="overlay">
-                            <div class="text">Led the design and development of goverment landing page for insurance fraud.</div>
-                          </div>
-                        </a>
+                    <div class="column work-item" onclick="hcModal()">                       
+                      <img src="images/happychef.png" alt="Avatar" class="image">
                     </div>
-                    <div class="column work-item">
+                    <div id="hcModal" class="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-content">
+                          <p>Developed UX solutions for dynamic PHP/ MySQL- based e-commerce site for HappyChef.</p>
+                          <a href="http://www.happychef.com/" target= "_blank" class="button is-white is-large">HappyChef</a>
+                        </div>
+                        <button onclick="closehcModal()" class="modal-close is-large" aria-label="close"></button>
+                    </div>
+                    <div id="work-item" class="column work-item" onclick="ifModal()">
+                        <img src="images/oifp-logo.png" alt="Avatar" class="image">
+                    </div>
+                    <div id="ifModal" class="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-content">
+                            <p>Led the design and development of goverment landing page for insurance fraud.</p>
+                            <a href="http://njinsurancefraud.org/" target= "_blank" class="button is-white is-large">NJ Insurance Fraud</a>
+                        </div>
+                        <button onclick="closeifModal()" class="modal-close is-large" aria-label="close"></button>
+                    </div>
+                    <div id="work-item" class="column work-item" onclick="vibesModal()">
                       <img src="images/VibesLogo3.png" alt="Avatar" class="image">
-                      <div class="overlay">
-                        <div class="text">VIBES is a Web application built using the Spotify API that filters new, perfectly tailored playlists with minimal user input. Built with JavaScript, HTML, and CSS.</div>
-                      </div>
+                    </div>
+                    <div id="vibesModal" class="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-content">
+                            <p>VIBES is a Web application built using the Spotify API that filters new, perfectly tailored playlists with minimal user input. Built with JavaScript, HTML, and CSS.</p>
+                            <a href="https://medium.com/imm-senior-showcase-2016/vibes-4284c5e7f8cf" target= "_blank" class="button is-white is-large">VIBES</a>
+                        </div>
+                        <button onclick="closevibesModal()"class="modal-close is-large" aria-label="close"></button>
                     </div>               
                 </div>
             </div>
@@ -98,16 +108,5 @@
 
 </html>
 
-<script type="text/javascript">
-    (function() {
-        var burger = document.querySelector('.burger');
-        var nav = document.querySelector('#'+burger.dataset.target);
- 
-        burger.addEventListener('click', function(){
-            burger.classList.toggle('is-active');
-            nav.classList.toggle('is-active');
-        });
-    })();
-</script>
-
-<script type="text/javascript" src="scripts/pdf.js"></script>
+<script type="text/javascript" src="js/navbar.js"></script>
+<script type="text/javascript" src="js/modals.js"></script>
