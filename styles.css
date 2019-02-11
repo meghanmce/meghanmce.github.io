@@ -83,7 +83,7 @@ li {
 
 .footer p {
     font-size: .9rem;
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .borderless {
