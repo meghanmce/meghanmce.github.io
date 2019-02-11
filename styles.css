@@ -39,6 +39,7 @@ li {
   position: relative;
   width: 50%;
   margin: auto;
+  cursor: pointer;
 }
 
 .image {
